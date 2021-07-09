@@ -51,16 +51,6 @@ with st.beta_expander("Count by Turncoat"):
         else:
             "*Data is not available*"
 
-with st.beta_expander("Count by Turncoat"):
-    try:
-        fig = count_by_parameter(state_options, "Turncoat")
-        st.plotly_chart(fig)
-    except Exception as e:
-        if not state_options:
-            "*Select one or more states to begin.*"
-        else:
-            "*Data is not available*"
-
 with st.beta_expander("Count by Incumbent"):
     try:
         fig = count_by_parameter(state_options, "Incumbent")

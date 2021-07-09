@@ -74,7 +74,7 @@ for i in unique_ids:
     names.append(name)
     state_comp.append(list(np.unique(np.array(of_state))))
 
-print("total duration", total_duration)
+# print("total duration", total_duration)
 
 # id_and_dur = {unique_ids[i]: total_duration[i] for i in range(len(unique_ids))}
 # print(id_and_dur)
@@ -136,7 +136,7 @@ for val in range(len(range_labels)):
         if i <= range_labels[val]:
             bar_count_gov[val] += 1
 
-print("yo", bar_count_gov)
+# print("yo", bar_count_gov)
 for i in range(len(bar_count_gov) - 1, 0, -1):
     if i > 0:
         bar_count_gov[i] -= bar_count_gov[i - 1]
@@ -171,5 +171,5 @@ fig = go.Figure(
 
 
 def governors_days():
-    print(bar_count_gov)
+    # print(bar_count_gov)
     return fig
