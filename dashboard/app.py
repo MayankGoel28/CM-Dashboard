@@ -43,8 +43,10 @@ with st.beta_expander("Timeline Visualized by State"):
 
 with st.beta_expander("Count by Turncoat"):
     try:
-        fig = count_by_parameter(state_options, "Turncoat")
+        data_df, fig = count_by_parameter(state_options, "Turncoat")
         st.plotly_chart(fig)
+        if show_df:
+            st.dataframe(data_df)
     except Exception as e:
         if not state_options:
             "*Select one or more states to begin.*"
@@ -53,8 +55,10 @@ with st.beta_expander("Count by Turncoat"):
 
 with st.beta_expander("Count by Incumbent"):
     try:
-        fig = count_by_parameter(state_options, "Incumbent")
+        data_df, fig = count_by_parameter(state_options, "Incumbent")
         st.plotly_chart(fig)
+        if show_df:
+            st.dataframe(data_df)
     except Exception as e:
         if not state_options:
             "*Select one or more states to begin.*"
@@ -63,8 +67,10 @@ with st.beta_expander("Count by Incumbent"):
 
 with st.beta_expander("Count by Recontest"):
     try:
-        fig = count_by_parameter(state_options, "Recontest")
+        data_df, fig = count_by_parameter(state_options, "Recontest")
         st.plotly_chart(fig)
+        if show_df:
+            st.dataframe(data_df)
     except Exception as e:
         if not state_options:
             "*Select one or more states to begin.*"
@@ -73,8 +79,10 @@ with st.beta_expander("Count by Recontest"):
 
 with st.beta_expander("Count by Terms as MLA"):
     try:
-        fig = count_by_parameter(state_options, "No_Terms_as_MLA")
+        data_df, fig = count_by_parameter(state_options, "No_Terms_as_MLA")
         st.plotly_chart(fig)
+        if show_df:
+            st.dataframe(data_df)
     except Exception as e:
         if not state_options:
             "*Select one or more states to begin.*"
@@ -83,8 +91,10 @@ with st.beta_expander("Count by Terms as MLA"):
 
 with st.beta_expander("Count by Terms as CM"):
     try:
-        fig = count_by_parameter(state_options, "No_Terms_as_CM")
+        data_df, fig = count_by_parameter(state_options, "No_Terms_as_CM")
         st.plotly_chart(fig)
+        if show_df:
+            st.dataframe(data_df)
     except Exception as e:
         if not state_options:
             "*Select one or more states to begin.*"
