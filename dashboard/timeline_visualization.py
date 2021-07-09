@@ -105,7 +105,7 @@ def count_by_parameter(states=[], parameter=""):
             if row["State_Name"] == state and row[parameter] != "":
                 data_df.append(row)
     fig = px.histogram(data_df, x=parameter)
-    return (fig)
+    return (data_df, fig)
 
 # fig = px.timeline(data_df, x_start='Start', x_end='Finish', y='State', color='State')
 # fig.show()
